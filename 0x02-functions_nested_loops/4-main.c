@@ -1,5 +1,4 @@
 #include "main.h"
-
 /**
  * main - check the code.
  *
@@ -7,8 +6,7 @@
  */
 int main(void)
 {
-    int r;
-
+  int r;
     r = _isalpha('H');
     _putchar(r + '0');
     r = _isalpha('o');
@@ -18,5 +16,5 @@ int main(void)
     r = _isalpha(';');
     _putchar(r + '0');
     _putchar('\n');
-    return (0);
+ return (0);
 }
