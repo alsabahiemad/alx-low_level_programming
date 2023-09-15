@@ -1,25 +1,30 @@
-/*
- * File: 1-dlistint_len.c
- * Auth: Brennan D Baraban
- */
-
 #include "lists.h"
 
 /**
- * dlistint_len - Counts the number of elements in a linked dlistint_t list.
- * @h: The head of the dlistint_t list.
+ * dlistint_len -  a function
+ * @h: the head of list
  *
- * Return: The number of elements in the dlistint_t list.
+ * Return: number element of the link list
  */
+
 size_t dlistint_len(const dlistint_t *h)
 {
-	size_t nodes = 0;
+	size_t nb = 0;
+	const dlistint_t *ptr;
 
-	while (h)
+	if (h == 0)
+		return (nb);
+	/*Recherche de la tete de liste*/
+	if (h->prev != NULL)
+		while (h->prev != NULL)
+			h = h->prev;
+	ptr = h;
+	while (ptr != NULL)
 	{
-		nodes++;
-		h = h->next;
+		nb++;
+		ptr = ptr->next;
 	}
 
-	return (nodes);
+	return (nb);
 }
+
